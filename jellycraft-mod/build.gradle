@@ -1,0 +1,85 @@
+plugins {
+        id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+        archivesName = project.archives_base_name
+}
+
+loom {
+        splitEnvironmentSourceSets()
+
+        mods {
+                "jellycraft" {
+                        sourceSet sourceSets.main
+                        sourceSet sourceSets.client
+                }
+        }
+}
+
+repositories {
+        // Iris & Sodium for the dev runtime only (build compile uses the verified local jar in libs/)
+        maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+        }
+}
+
+dependencies {
+        minecraft "com.mojang:minecraft:${project.minecraft_version}"
+        mappings loom.officialMojangMappings()
+        modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+        // Fabric API
+        modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+        // Iris (optional at runtime): compile against the REAL downloaded Iris jar.
+        // The Iris API surface we call (IrisApi / Iris statics) crosses no Minecraft types,
+        // so a plain compileOnly file dep is safe under any mappings. Runtime Iris comes
+        // from the user's install (or the .mrpack), never bundled.
+        compileOnly files("libs/iris-${iris_version}.jar")
+
+        // Dev-runtime only — lets `gradle runClient` test with the real thing. Not required for build.
+        // (Modrinth maven uses project IDs as artifactIds; verified via maven-metadata.)
+        modRuntimeOnly "maven.modrinth:YL57xq9U:1.10.8+1.21.11-fabric"   // Iris
+        modRuntimeOnly "maven.modrinth:AANobbMI:mc1.21.11-0.8.14-fabric" // Sodium
+}
+
+// Keep the source tree and pull requests text-only.  The distributable shader
+// archive is assembled from ../jellycraft-shaders as part of every mod build,
+// then embedded at the path consumed by ShaderPackAutoInstaller.
+def bundleShaderPack = tasks.register("bundleShaderPack", Zip) {
+        archiveFileName = "jellycraft-shaders.zip"
+        destinationDirectory = layout.buildDirectory.dir("generated/shaderpacks")
+        from("../jellycraft-shaders") {
+                include "README.txt"
+                include "shaders/**"
+        }
+}
+
+processResources {
+        def version = project.version
+        inputs.property "version", version
+        dependsOn bundleShaderPack
+
+        from(bundleShaderPack) {
+                into "assets/jellycraft/shaderpacks"
+        }
+
+        filesMatching("fabric.mod.json") {
+                expand "version": version
+        }
+}
+
+tasks.withType(JavaCompile).configureEach {
+        it.options.release = 21
+}
+
+java {
+        withSourcesJar()
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+}

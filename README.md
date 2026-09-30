@@ -1,8 +1,11 @@
 # JELLYCRAFT v0.1.0 — "Minecraft, but everything is made of jelly"
 
 Transforms Minecraft Java **1.21.11** into a jelly world: glossy translucent terrain,
-a thick green gel flood where water was, gel Creeper, jelly-glass pickaxe, wet glossy
+a clear aqua gel flood where water was, gel Creeper, jelly-glass pickaxe, wet glossy
 hands — voxel geometry, pixel textures and gameplay stay 100% vanilla.
+
+Solid terrain and block entities use a subtle **6% alpha-blended jelly transmission** by
+default. It is adjustable under **Jelly Effects → Block translucency** in Iris.
 
 ## Exact pinned environment (all verified, none guessed)
 
@@ -49,6 +52,13 @@ hands — voxel geometry, pixel textures and gameplay stay 100% vanilla.
 - `Jellycraft-1.21.11-0.1.0.mrpack` — one-import Modrinth modpack.
 - `PROGRESS.md`, `QA-REPORT.md`, `OPTIMIZATION-REPORT.md` — the project ledger and honest reports.
 
+## Building from source
+
+Binary distributions are intentionally not updated in Git commits. GitHub Actions builds the
+Fabric JAR and publishes it as a workflow artifact; locally run `gradle --no-daemon build` from
+`jellycraft-mod`. The build generates and embeds `jellycraft-shaders.zip` from the text shader
+sources, so no nested ZIP needs to be checked in.
+
 ## Shader presets (Iris → Shader Pack Settings)
 
 | Preset | Shadows | SSR | Refraction | Caustics | Target overhead |
@@ -58,8 +68,10 @@ hands — voxel geometry, pixel textures and gameplay stay 100% vanilla.
 | High | on | on | on | on | ~50% |
 | Ultra | on | on (32 steps) | on | on | uncapped |
 
-Comfort: set **Wobble strength → 0%** (or mod config `wobbleIntensity: 0`) to disable all
-jelly motion while keeping the jelly look.
+Comfort: in the shader settings, set **Wobble strength → 0%** and **Player bend strength → 0%**
+to disable all jelly motion while keeping the jelly look. The default
+color grade preserves a blue sky and normal daylight saturation; jelly comes from deformation,
+wet highlights and refraction rather than a yellow-green world filter.
 
 ## Verified vs UNTESTED — read this
 

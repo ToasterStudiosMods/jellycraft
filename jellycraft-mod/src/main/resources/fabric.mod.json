@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "jellycraft",
+	"version": "${version}",
+	"name": "JELLYCRAFT",
+	"description": "Minecraft, but everything is made of jelly. Bundles the JELLYCRAFT art resource pack (enabled by default), auto-installs and auto-enables the JELLYCRAFT Iris shader pack on first run, and provides the jelly material system + config screen (J key).",
+	"authors": [
+		"JELLYCRAFT Project"
+	],
+	"contact": {
+		"homepage": "https://github.com/jellycraft/jellycraft",
+		"sources": "https://github.com/jellycraft/jellycraft"
+	},
+	"license": "MIT",
+	"icon": "assets/jellycraft/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"dev.jellycraft.JellycraftMod"
+		],
+		"client": [
+			"dev.jellycraft.client.JellycraftClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.0",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"iris": "1.10.*",
+		"sodium": "0.8.*",
+		"modmenu": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"clientsideOnly": true
+		}
+	}
+}
