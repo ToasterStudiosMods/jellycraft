@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "jellycraft:item/jelly_glass_pickaxe_icon"
+	}
+}

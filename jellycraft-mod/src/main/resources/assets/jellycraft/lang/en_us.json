@@ -1,0 +1,15 @@
+{
+        "key.category.jellycraft.main": "JELLYCRAFT",
+        "category.jellycraft": "JELLYCRAFT",
+        "key.jellycraft.config": "Open JELLYCRAFT Settings",
+        "jellycraft.config.title": "JELLYCRAFT Settings",
+        "jellycraft.config.hint": "Minecraft, but everything is made of jelly",
+        "jellycraft.config.autoinstall": "Auto-install shader pack",
+        "jellycraft.config.autoenable": "Auto-enable on first run",
+        "jellycraft.config.wobble": "Jelly wobble intensity",
+        "jellycraft.config.hand": "Hand style",
+        "jellycraft.config.reinstall": "Reinstall shader pack",
+        "jellycraft.config.openiris": "Open Iris shader packs…",
+        "jellycraft.config.noiris": "Iris not installed (mod-only look)",
+        "jellycraft.built-in-pack.name": "JELLYCRAFT Art (hands, tools, materials)"
+}

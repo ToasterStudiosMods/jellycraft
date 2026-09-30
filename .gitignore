@@ -1,0 +1,8 @@
+# Build and release outputs are generated locally or by GitHub Actions.
+# Keep pull requests reviewable by never committing binary distributions.
+/jellycraft-mod/build/
+/jellycraft-mod/.gradle/
+/Jellycraft-*.zip
+/jellycraft-*.jar
+/jellycraft-*.zip
+/jellycraft-*.mrpack
