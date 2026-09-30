@@ -44,7 +44,7 @@ dependencies {
 
         // Dev-runtime only — lets `gradle runClient` test with the real thing. Not required for build.
         // (Modrinth maven uses project IDs as artifactIds; verified via maven-metadata.)
-        modRuntimeOnly "maven.modrinth:YL57xq9U:1.10.8+1.21.11-fabric"   // Iris
+        modRuntimeOnly "maven.modrinth:YL57xq9U:${project.iris_version}" // Iris
         modRuntimeOnly "maven.modrinth:AANobbMI:mc1.21.11-0.8.14-fabric" // Sodium
 }
 
