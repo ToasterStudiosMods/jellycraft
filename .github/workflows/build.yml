@@ -20,11 +20,13 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v4
 
-      - name: Set up JDK 21
+      # Fabric Loom 1.18.2 requires a Java 25 runtime. Keep this aligned with
+      # the Gradle plugin rather than the mod's Java 21 bytecode target.
+      - name: Set up JDK 25
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: "21"
+          java-version: "25"
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
