@@ -36,11 +36,11 @@ dependencies {
         // Fabric API
         modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-        // Iris (optional at runtime): compile against the REAL downloaded Iris jar.
-        // The Iris API surface we call (IrisApi / Iris statics) crosses no Minecraft types,
-        // so a plain compileOnly file dep is safe under any mappings. Runtime Iris comes
-        // from the user's install (or the .mrpack), never bundled.
-        compileOnly files("libs/iris-${iris_version}.jar")
+        // Iris is optional at runtime, but IrisCompat directly references its API and
+        // therefore needs the real API jar on the *client compile* classpath. Using a
+        // repository dependency keeps CI reproducible; the previous local libs/ path
+        // does not exist on GitHub runners and caused compileClientJava to fail.
+        modCompileOnly "maven.modrinth:YL57xq9U:${project.iris_version}"
 
         // Dev-runtime only — lets `gradle runClient` test with the real thing. Not required for build.
         // (Modrinth maven uses project IDs as artifactIds; verified via maven-metadata.)
