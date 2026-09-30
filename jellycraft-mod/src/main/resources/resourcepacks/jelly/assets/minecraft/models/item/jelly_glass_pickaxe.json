@@ -1,0 +1,111 @@
+{
+	"credit": "JELLYCRAFT — jelly-glass pickaxe: clear glass head, cream binding, oak handle",
+	"texture_size": [16, 16],
+	"textures": {
+		"head": "jellycraft:item/jelly_glass_head",
+		"binding": "jellycraft:item/jelly_binding",
+		"handle": "minecraft:block/oak_planks",
+		"particle": "jellycraft:item/jelly_glass_head"
+	},
+	"elements": [
+		{
+			"name": "handle",
+			"from": [7, 0, 7],
+			"to": [9, 15, 9],
+			"faces": {
+				"north": {"uv": [7, 1, 9, 16], "texture": "#handle"},
+				"south": {"uv": [7, 1, 9, 16], "texture": "#handle"},
+				"east": {"uv": [7, 1, 9, 16], "texture": "#handle"},
+				"west": {"uv": [7, 1, 9, 16], "texture": "#handle"},
+				"up": {"uv": [7, 7, 9, 9], "texture": "#handle"},
+				"down": {"uv": [7, 7, 9, 9], "texture": "#handle"}
+			}
+		},
+		{
+			"name": "binding_knot",
+			"from": [5.5, 10, 5.5],
+			"to": [10.5, 13, 10.5],
+			"faces": {
+				"north": {"uv": [5, 3, 10, 6], "texture": "#binding"},
+				"south": {"uv": [6, 3, 11, 6], "texture": "#binding"},
+				"east": {"uv": [5, 3, 10, 6], "texture": "#binding"},
+				"west": {"uv": [6, 3, 11, 6], "texture": "#binding"},
+				"up": {"uv": [5, 5, 10, 10], "texture": "#binding"},
+				"down": {"uv": [5, 6, 10, 11], "texture": "#binding"}
+			}
+		},
+		{
+			"name": "head_bar",
+			"from": [3, 12.5, 7.25],
+			"to": [13, 14.5, 8.75],
+			"faces": {
+				"north": {"uv": [3, 1, 13, 3], "texture": "#head"},
+				"south": {"uv": [3, 1, 13, 3], "texture": "#head"},
+				"east": {"uv": [0, 1, 2, 3], "texture": "#head"},
+				"west": {"uv": [14, 1, 16, 3], "texture": "#head"},
+				"up": {"uv": [3, 4, 13, 6], "texture": "#head"},
+				"down": {"uv": [3, 10, 13, 12], "texture": "#head"}
+			}
+		},
+		{
+			"name": "head_tip_left",
+			"from": [0.5, 8.5, 7.25],
+			"to": [3.5, 13.5, 8.75],
+			"rotation": {"origin": [3.5, 13, 8], "axis": "z", "angle": 30},
+			"faces": {
+				"north": {"uv": [0, 3, 3, 8], "texture": "#head"},
+				"south": {"uv": [0, 3, 3, 8], "texture": "#head"},
+				"east": {"uv": [13, 3, 16, 8], "texture": "#head"},
+				"west": {"uv": [0, 3, 3, 8], "texture": "#head"},
+				"up": {"uv": [0, 8, 3, 10], "texture": "#head"},
+				"down": {"uv": [0, 6, 3, 8], "texture": "#head"}
+			}
+		},
+		{
+			"name": "head_tip_right",
+			"from": [12.5, 8.5, 7.25],
+			"to": [15.5, 13.5, 8.75],
+			"rotation": {"origin": [12.5, 13, 8], "axis": "z", "angle": -30},
+			"faces": {
+				"north": {"uv": [13, 3, 16, 8], "texture": "#head"},
+				"south": {"uv": [13, 3, 16, 8], "texture": "#head"},
+				"east": {"uv": [13, 3, 16, 8], "texture": "#head"},
+				"west": {"uv": [0, 3, 3, 8], "texture": "#head"},
+				"up": {"uv": [13, 8, 16, 10], "texture": "#head"},
+				"down": {"uv": [13, 6, 16, 8], "texture": "#head"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -90, 45],
+			"translation": [1.13, 3.2, 1.13],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 90, -45],
+			"translation": [1.13, 3.2, 1.13],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -90, 25],
+			"translation": [1.13, 3.2, 1.13],
+			"scale": [0.68, 0.68, 0.68]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 90, -25],
+			"translation": [1.13, 3.2, 1.13],
+			"scale": [0.68, 0.68, 0.68]
+		},
+		"fixed": {
+			"rotation": [0, 0, 0],
+			"translation": [0, 1, 0],
+			"scale": [0.9, 0.9, 0.9]
+		},
+		"head": {
+			"rotation": [0, -90, 45],
+			"translation": [0, 4, 0],
+			"scale": [0.8, 0.8, 0.8]
+		}
+	}
+}

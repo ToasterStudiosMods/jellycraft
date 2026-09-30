@@ -1,0 +1,53 @@
+profile.LOW=Low (10% budget)
+profile.MEDIUM=Medium (25% budget)
+profile.HIGH=High (50% budget)
+profile.ULTRA=Ultra (quality ceiling)
+
+screen.JELLY_EFFECTS=Jelly Effects
+screen.JELLY_MOTION=Motion & Comfort
+screen.JELLY_COLOR=Color & Exposure
+
+option.VANILLA_MODE=Vanilla mode (disable jelly look)
+option.VANILLA_MODE.comment=Master fallback: renders approximately vanilla shading through the same programs. The JELLYCRAFT mod config also offers a full vanilla look when this pack is disabled.
+option.WOBBLE=Jelly wobble
+option.WOBBLE.comment=Springy world-space jelly sway of terrain and liquid. Continuous world-space displacement, so no cracks between blocks. Disable for comfort (reduce-motion).
+option.WOBBLE_STRENGTH=Wobble strength
+option.WOBBLE_STRENGTH.comment=0% disables all wobble animation (comfort-safe). 100% is the tuned default.
+option.PLAYER_BEND=Player pressure bend
+option.PLAYER_BEND.comment=Nearby terrain and gel water bow outward and settle as you walk. The position-only field is seamless across block faces.
+option.PLAYER_BEND_STRENGTH=Player bend strength
+option.PLAYER_BEND_STRENGTH.comment=0% removes the camera-following pressure bowl; 100% is a visible but walkable-looking deformation.
+option.BLOCK_TRANSLUCENCY=Block translucency
+option.BLOCK_TRANSLUCENCY.comment=The thin alpha-blended jelly skin on solid terrain and block entities. 6% is the recommended default.
+option.SPARKLE_STRENGTH=Sparkle glints
+option.SPARKLE_STRENGTH.comment=Fine specular glitter on grass, liquid and stone, like wet jelly catching the sun (Refs 2/4).
+option.SUBSURFACE=Subsurface glow
+option.SUBSURFACE.comment=Strength of the internal-scattering glow that makes thin jelly edges and fingers light up.
+option.WETNESS=Wetness
+option.WETNESS.comment=Global wet-gloss multiplier for the whole jelly world.
+option.REFRACTION=Refraction
+option.REFRACTION.comment=Real screen-space refraction through jelly liquid and glass tools, with depth validation so foreground objects never smear.
+option.REFRACTION_STRENGTH=Refraction strength
+option.SSR=Screen-space reflections
+option.SSR.comment=Reflections of nearby terrain on the jelly liquid surface (HIGH+). Off = sky/Fresnel reflections only.
+option.SSR_STEPS=SSR ray steps
+option.SHADOWS=Soft shadows
+option.SHADOWS.comment=Soft filtered shadow mapping on the jelly world (HIGH+).
+option.CAUSTICS=Caustic shimmer
+option.CAUSTICS.comment=Caustic-like light patches seen through the jelly liquid (HIGH+).
+option.BLOOM=Bloom
+option.BLOOM.comment=Soft highlight bloom that sells glossy jelly glints.
+option.BLOOM_STRENGTH=Bloom strength
+option.EXPOSURE=Exposure
+option.EXPOSURE.comment=Display brightness. 100% preserves Minecraft daylight balance.
+option.SATURATION=Color vibrance
+option.SATURATION.comment=Color intensity. 100% keeps natural sky and terrain colors while the material effects supply the jelly look.
+
+value.WOBBLE_STRENGTH.0=Off (comfort)
+value.PLAYER_BEND_STRENGTH.0=Off (comfort)
+value.BLOCK_TRANSLUCENCY.0=Opaque
+value.SPARKLE_STRENGTH.0=Off
+value.SUBSURFACE.0=Off
+value.WETNESS.0=Off
+value.REFRACTION_STRENGTH.0=Off
+value.BLOOM_STRENGTH.0=Off
