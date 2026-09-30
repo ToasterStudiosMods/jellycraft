@@ -31,9 +31,7 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          # Loom 1.18.2 publishes its runtime plugin variant for Gradle 9.7.
-          # Pinning 8.14.4 makes Gradle reject that variant before compilation.
-          gradle-version: "9.7.0"
+          gradle-version: "8.14.4"
 
       - name: Compile and test
         run: gradle --no-daemon build

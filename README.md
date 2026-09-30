@@ -17,7 +17,6 @@ default. It is adjustable under **Jelly Effects → Block translucency** in Iris
 | Sodium | **0.8.14 (mc1.21.11-fabric)** | Modrinth (stable; 0.8.15-beta.1 rejected) |
 | Iris Shaders | **1.10.8+mc1.21.11-fabric** | Modrinth (stable) |
 | Java | **25** for Gradle/Loom (mod bytecode targets 21) | Fabric Loom 1.18.2 |
-| Gradle | **9.7** | Fabric Loom 1.18.2 plugin variant |
 
 ## Install — easiest (one import)
 
